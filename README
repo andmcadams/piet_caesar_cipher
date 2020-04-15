@@ -1,0 +1,27 @@
+Andrew McAdams
+Caesar Cipher Program
+caesar_cipher.ppm
+
+
+npiet is an interpreter for the programming language Piet. The code for npiet can be found at https://github.com/gleitz/npiet although it was included as 'npiet.c' in the Canvas upload for convenience. npiet is not my code, but it is one of the more popular interpreters for piet programs. The Piet language is based on color changes in the image file (.ppm). More can be found at http://www.dangermouse.net/esoteric/piet.html
+
+Setup:
+
+Make sure 'makefile' and 'npiet.c' are present.
+You will need to build the interpreter (npiet) from source code. Simply run 'make'.
+
+$ make
+
+To run after making npiet:
+
+$ ./npiet -q -cs 3 caesar_cipher.ppm
+
+Once running, you must enter a (non-negative) number to indicate the letter shift then hit 'enter'. Then you must enter the text you wish to encode/decode followed by 'enter'. Text must be in only capital letters unbroken by a newline character. Spaces can be input between words. No other special punctuation is allowed and may behave unpredictably. Input can be piped and several example inputs have been included. If piping input, don't forget a newline at the end of your text!
+
+Try running:
+
+$ ./npiet -q -cs 3 caesar_cipher.ppm < ex1_input.txt
+
+Here the -q flag makes the interpreter run quietly. This is done so that '?'s are not printed out at every input prompt. The -cs flag sets the codel size to 3. If removed, npiet will try to guess the codel size, and an incorrect guess may cause issues.
+
+Decoding is done exactly the same way as encoding since the transformation is simply a letter shift. Look at ex3_input.txt and ex4_input.txt for an example.
